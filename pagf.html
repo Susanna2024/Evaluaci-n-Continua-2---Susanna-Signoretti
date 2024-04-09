@@ -46,11 +46,12 @@
   <br>
   <h1>MAY THE FORCE BE WITH YOU</h1>
 
-<h2> START NOW AND CHOOSE YOU TRAINING</h2>
+<h2> START NOW AND CHOOSE YOUR TRAINING</h2>
 <br>
 <br>
 
 
+  <!-- TABLE -->
 
   <table class="table ">
       <tr>
@@ -72,7 +73,7 @@
                 />
             <div class="ms-3">
 
-              <p class="fw-bold mb-1">PLANK</p>
+              <p  id="plank" class="fw-bold mb-1">PLANK</p>
             </div>
           </div>
         </td>
@@ -81,23 +82,24 @@
         </td>
        
         <td>
-          <input type="checkbox" onclick="AddCheckedProducts()" id="wonder-course" name="wonder_course" value="21"> 
-
+          <button type="button" class="btn btn-outline-warning "onclick="show()">Add Exercise</button> 
+          <button type="button" class="btn btn-outline-danger" onclick="hide()">Remove Exercise</button> 
         </td>
       </tr>
+  <!-- AB BYCICLE -->
 
       
       <tr>
         <td>
           <div class="d-flex align-items-center">
             <img
-                src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                src="/pics/abs.jpeg"
                 class="rounded-circle"
                 alt=""
                 style="width: 45px; height: 45px"
                 />
             <div class="ms-3">
-              <p class="fw-bold mb-1">AB Bycicle</p>
+              <p id="ab" class="fw-bold mb-1">AB Bycicle</p>
             </div>
           </div>
         </td>
@@ -106,102 +108,81 @@
         </td>
         <td>
 
-          <input type="checkbox" onclick="AddCheckedProducts()" id="wonder-course" name="wonder_course" value="21"> 
-
+          <button type="button" class="btn btn-outline-warning "onclick="show2()">Add Exercise</button> 
+          <button type="button" class="btn btn-outline-danger" onclick="hide2()">Remove Exercise</button> 
         </td>
       </tr>
+
+  <!-- SQUAT -->
 
 
       <tr>
         <td>
           <div class="d-flex align-items-center">
             <img
-                src="/pics/plank.jpeg"
+                src="/pics/squat.jpeg"
                 alt=""
                 style="width: 45px; height: 45px"
                 class="rounded-circle"
                 />
             <div class="ms-3">
 
-              <p class="fw-bold mb-1">PLANK</p>
+              <p  id="squat" class="fw-bold mb-1">SQUAT</p>
+
             </div>
           </div>
         </td>
         <td>
-          <p class="fw-normal mb-1">Making plank for boost your force</p>
+          <p class="fw-normal mb-1">Making squat for boost your legs</p>
         </td>
        
         <td>
-          <input type="checkbox" onclick="AddCheckedProducts()" id="wonder-course" name="wonder_course" value="21"> 
+          <button type="button" class="btn btn-outline-warning "onclick="show3()">Add Exercise</button> 
+          
+          <button type="button" class="btn btn-outline-danger" onclick="hide3()">Remove Exercise</button> 
 
         </td>
       </tr>
-
-     
-
-            
 
 
     </tbody>
   </table>
 
 
+  <script src="funzioni.js"> </script>
+
+
+  <!-- RUTINA -->
+  <h1>YOUR PERSONALIZED TRAINING</h1>
 
 
 
-
-
-
-
-
-  
-    
-   
-    
-   
-    
- 
-    
-
-    
-   
-    <h1>Contact us for more information</h1>
-    <form>      
-        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <input type="submit" value="SUBMIT"/>
-      </form>
-
-
-
-
+      <h4 id="myP">   <img src="/pics/plank.jpeg" alt="" style="width: 45px; height: 45px"  class="rounded-circle"/>PLANK </h4> 
+      <h4 id="myP2"><img src="/pics/abs.jpeg"class="rounded-circle" alt="" style="width: 45px; height: 45px"/>AB BYCICLE</h4>
+      <h4  id="myP3"> <img
+        src="/pics/squat.jpeg"
+        alt=""
+        style="width: 45px; height: 45px"
+        class="rounded-circle"
+        />SQUAT</h4>
 <br>
 <br>
-<br><br>
+<br>
+<br>
 
-    <script type="text/javascript">
+
+
+
+
     
-    
-        var CSC_total_spot2 = "current-total-amount";
+     
         
-        
-        
-        var CSC_checkbox_IDs2 = new Array( "wonder-book", "wonder-course", "wonder-video" );
-            
-        function AddCheckedProducts()
-        {
-           var value = 0.0;
-           for( var i=0; i<CSC_checkbox_IDs2.length; i++ )
-           {
-              var d = document.getElementById(CSC_checkbox_IDs2[i]);
-              if( d.checked ) { value += parseFloat(d.value); }
-           }
-           document.getElementById(CSC_total_spot2).innerHTML = value.toFixed(2);
-        }
-        AddCheckedProducts();
-        </script>
-        
+
+
+
+
+
+
 
       <!-- footer -->
 
