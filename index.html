@@ -13,34 +13,38 @@
   <body>
   
 <!-- menu -->
-<nav class="navbar navbar-expand-lg ">
-      <div class="container-fluid">
-        <a class="navbar" onClick="document.location.href='index.html'" >
-
-        <img src="/pics/LOGO.JPG" alt="" />
-         
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+          <img src="/pics/LOGO.JPG" alt="" width="150">
       </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-              <a class="nav-link" onClick="document.location.href='pag1.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Excercises
-              </a>
-              
-            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" onClick="document.location.href='pag1.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Excercises
+                  </a>
+              </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-warning" type="submit">Search</button>
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
           </form>
-        </div>
       </div>
-    </nav>
+  </div>
+</nav>
+
+</nav>
+
   
   <!-- main section -->
   <div class="main py-5">

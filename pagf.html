@@ -8,37 +8,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="funzioni.js">
   </head>
   <body>
   
 <!-- menu -->
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar" onClick="document.location.href='index.html'" >
-
-    <img src="/pics/LOGO.JPG" alt="" />
-     
-  </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-          <a class="nav-link" onClick="document.location.href='pag1.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Excercises
-          </a>
-          
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-warning" type="submit">Search</button>
-      </form>
-    </div>
+      <a class="navbar-brand" href="index.html">
+          <img src="/pics/LOGO.JPG" alt="" width="150">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" onClick="document.location.href='pag1.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Excercises
+                  </a>
+              </li>
+          </ul>
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+      </div>
   </div>
+</nav>
+
 </nav>
   
   <!-- main section -->
@@ -52,101 +56,150 @@
 
 
   <!-- TABLE -->
-
-  <table class="table ">
-      <tr>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Status</th>
-     
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img
-                src="/pics/plank.jpeg"
-                alt=""
-                style="width: 45px; height: 45px"
-                class="rounded-circle"
-                />
-            <div class="ms-3">
-
-              <p  id="plank" class="fw-bold mb-1">PLANK</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Video</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- PLANK -->
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <img src="/pics/plank.jpeg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+          <div class="ms-3">
+            <p id="plank" class="fw-bold mb-1">PLANK</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">Making plank for boost your force</p>
+      </td>
+      <!-- Modal button for PLANK -->
+      <td>
+        <div class="d-grid gap-3 col-5 mx-auto">
+          <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#plankModal">
+            View PLANK Video
+          </button>
+        </div>
+      </td>
+      <!-- PLANK Modal -->
+      <div class="modal fade" id="plankModal" tabindex="-1" role="dialog" aria-labelledby="plankModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="plankModalLabel">PLANK Video</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-video-container">
+                <!-- Embed del video tramite iframe -->
+                <iframe class="embed-responsive-item" src="/pics/videoplank.mp4" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Making plank for boost your force</p>
-        </td>
-       
-        <td>
-          <button type="button" class="btn btn-outline-warning "onclick="show()">Add Exercise</button> 
-          <button type="button" class="btn btn-outline-danger" onclick="hide()">Remove Exercise</button> 
-        </td>
-      </tr>
-  <!-- AB BYCICLE -->
-
-      
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img
-                src="/pics/abs.jpeg"
-                class="rounded-circle"
-                alt=""
-                style="width: 45px; height: 45px"
-                />
-            <div class="ms-3">
-              <p id="ab" class="fw-bold mb-1">AB Bycicle</p>
+        </div>
+      </div>
+      <!-- buttons add or remove -->
+      <td>
+        <button type="button" class="btn btn-outline-warning "onclick="show()">Add Exercise</button> 
+        <button type="button" class="btn btn-outline-danger" onclick="hide()">Remove Exercise</button> 
+      </td>
+    </tr>
+    <!-- AB BYCICLE -->
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <img src="/pics/abs.jpeg" class="rounded-circle" alt="" style="width: 45px; height: 45px">
+          <div class="ms-3">
+            <p id="ab" class="fw-bold mb-1">AB Bycicle</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">Making AB bicycle for improve your abs</p>
+      </td>
+      <!-- AB Bicycle Modal button -->
+      <td>
+        <div class="d-grid gap-3 col-5 mx-auto">
+          <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#abModal">
+            View AB Bicycle Video
+          </button>
+        </div>
+      </td>
+      <!-- AB Bicycle Modal -->
+      <div class="modal fade" id="abModal" tabindex="-1" role="dialog" aria-labelledby="abModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="abModalLabel">AB Bicycle Video</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-video-container">
+                <!-- Embed del video tramite iframe -->
+                <iframe class="embed-responsive-item" src="/pics/abs.mp4" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Making AB bicycle for improove yor abs</p>
-        </td>
-        <td>
-
-          <button type="button" class="btn btn-outline-warning "onclick="show2()">Add Exercise</button> 
-          <button type="button" class="btn btn-outline-danger" onclick="hide2()">Remove Exercise</button> 
-        </td>
-      </tr>
-
-  <!-- SQUAT -->
-
-
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img
-                src="/pics/squat.jpeg"
-                alt=""
-                style="width: 45px; height: 45px"
-                class="rounded-circle"
-                />
-            <div class="ms-3">
-
-              <p  id="squat" class="fw-bold mb-1">SQUAT</p>
-
+        </div>
+      </div>
+      <!-- buttons add or remove -->
+      <td>
+        <button type="button" class="btn btn-outline-warning "onclick="show2()">Add Exercise</button> 
+        <button type="button" class="btn btn-outline-danger" onclick="hide2()">Remove Exercise</button> 
+      </td>
+    </tr>
+    <!-- SQUAT -->
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <img src="/pics/squat.jpeg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+          <div class="ms-3">
+            <p id="squat" class="fw-bold mb-1">SQUAT</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">Making squat for boost your legs</p>
+      </td>
+      <!-- Modal button for SQUAT -->
+      <td>
+        <div class="d-grid gap-3 col-5 mx-auto">
+          <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#squatModal">
+            View SQUAT Video
+          </button>
+        </div>
+      </td>
+      <!-- SQUAT Modal -->
+      <div class="modal fade" id="squatModal" tabindex="-1" role="dialog" aria-labelledby="squatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="squatModalLabel">SQUAT Video</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-video-container">
+                <!-- Embed del video tramite iframe -->
+                <iframe class="embed-responsive-item" src="/pics/videosquat.mp4" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Making squat for boost your legs</p>
-        </td>
-       
-        <td>
-          <button type="button" class="btn btn-outline-warning "onclick="show3()">Add Exercise</button> 
-          
-          <button type="button" class="btn btn-outline-danger" onclick="hide3()">Remove Exercise</button> 
-
-        </td>
-      </tr>
-
-
-    </tbody>
-  </table>
+        </div>
+      </div>
+      <!-- buttons add or remove -->
+      <td>
+        <button type="button" class="btn btn-outline-warning "onclick="show3()">Add Exercise</button> 
+        <button type="button" class="btn btn-outline-danger" onclick="hide3()">Remove Exercise</button> 
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
   <script src="funzioni.js"> </script>

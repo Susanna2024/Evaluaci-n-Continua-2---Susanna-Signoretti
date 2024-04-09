@@ -1,105 +1,204 @@
 
 
-.navbar{
-background-color: white;
-color:white;
+/* ----------- iPhone  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
 }
 
 
-.nav-link:hover{
-        color:#e2ba1f;
-        cursor: pointer;
-        }
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
 
 
 
 
-        /*main*/
-        .main {
-background: rgb(2,0,36);
-  background-image: url(/pics/1bo.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        height: 110vh;
-        }
-
-        .testo { 
-            margin-top: 50px;
-            margin-left:300px;
-         }
-
-h1{color: #e2ba1f}
-h2 {color: chocolate;}
 
 
-.main h1{
+/* Navbar */
+.navbar {
+    background-color: white;
+    color: black; /* Modifica il colore del testo per renderlo visibile sullo sfondo bianco */
+}
+
+.nav-link:hover {
+    color: #e2ba1f;
+    cursor: pointer;
+}
+
+/* Main section */
+.main {
+    background: rgb(2, 0, 36);
+    background-image: url(/pics/1bo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+
+.testo {
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+h1 {
+    color: #e2ba1f;
+}
+
+h2 {
+    color: chocolate;
+}
+
+.main h1 {
     font-size: 3rem;
-    font-weight:  600;
+    font-weight: 600;
+}
+
+//* Navbar */
+.navbar {
+    background-color: white;
+    color: black;
+}
+
+.nav-link:hover {
+    color: #e2ba1f;
+    cursor: pointer;
+}
+
+/* Main section */
+.main {
+    background: rgb(2, 0, 36);
+    background-image: url(/pics/1bo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main h1 {
+    color: #e2ba1f;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* Navbar responsive */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        color: black;
+        border-color: black;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 
   
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
   
-  /*cards*/
-
-  /*cards*/
-
-
-  .main_container{
+  
+/* Cards */
+.main_container {
     align-items: center;
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 70px;
     margin-right: 50px;
-}
-
-#cards_landscape_wrap-2{
+  }
+  
+  #cards_landscape_wrap-2 {
     text-align: center;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,31,41,1) 0%, rgba(2,6,6,1) 100%);}
-  #cards_landscape_wrap-2 .container{
-    padding-top: 10px; 
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(31, 31, 41, 1) 0%, rgba(2, 6, 6, 1) 100%);
+  }
+  
+  #cards_landscape_wrap-2 .container {
+    padding-top: 10px;
     padding-bottom: 100px;
   }
-  #cards_landscape_wrap-2 a{
+  
+  #cards_landscape_wrap-2 a {
     text-decoration: none;
     outline: none;
   }
+  
   #cards_landscape_wrap-2 .card-flyer {
     border-radius: 5px;
   }
-  #cards_landscape_wrap-2 .card-flyer .image-box{
+  
+  #cards_landscape_wrap-2 .card-flyer .image-box {
     background: #ffffff;
     overflow: hidden;
-     box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
+    box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
     ;
     border-radius: 6px;
   }
-  #cards_landscape_wrap-2 .card-flyer .image-box img{
-    -webkit-transition:all .9s ease; 
-    -moz-transition:all .9s ease; 
-    -o-transition:all .9s ease;
-    -ms-transition:all .9s ease; 
+  
+  #cards_landscape_wrap-2 .card-flyer .image-box img {
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
     width: 100%;
     height: 200px;
   }
-  #cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  
+  #cards_landscape_wrap-2 .card-flyer:hover .image-box img {
     opacity: 0.7;
-    -webkit-transform:scale(1.15);
-    -moz-transform:scale(1.15);
-    -ms-transform:scale(1.15);
-    -o-transform:scale(1.15);
-    transform:scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
   }
-  #cards_landscape_wrap-2 .card-flyer .text-box{
+  
+  #cards_landscape_wrap-2 .card-flyer .text-box {
     text-align: center;
     box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
-
   }
-  #cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  
+  #cards_landscape_wrap-2 .card-flyer .text-box .text-container {
     padding: 30px 18px;
   }
-  #cards_landscape_wrap-2 .card-flyer{
+  
+  #cards_landscape_wrap-2 .card-flyer {
     background: #FFFFFF;
     margin-top: 50px;
     -webkit-transition: all 0.2s ease-in;
@@ -109,7 +208,8 @@ h2 {color: chocolate;}
     transition: all 0.2s ease-in;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
   }
-  #cards_landscape_wrap-2 .card-flyer:hover{
+  
+  #cards_landscape_wrap-2 .card-flyer:hover {
     background: #fff;
     box-shadow: 0px 15px 26px #e2ba1f;
     -webkit-transition: all 0.2s ease-in;
@@ -119,17 +219,19 @@ h2 {color: chocolate;}
     transition: all 0.2s ease-in;
     margin-top: 50px;
   }
-  #cards_landscape_wrap-2 .card-flyer .text-box p{
+  
+  #cards_landscape_wrap-2 .card-flyer .text-box p {
     margin-top: 10px;
     margin-bottom: 0px;
-    padding-bottom: 0px; 
+    padding-bottom: 0px;
     font-size: 14px;
     letter-spacing: 1px;
     color: #000000;
   }
-  #cards_landscape_wrap-2 .card-flyer .text-box h6{
+  
+  #cards_landscape_wrap-2 .card-flyer .text-box h6 {
     margin-top: 0px;
-    margin-bottom: 4px; 
+    margin-bottom: 4px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
@@ -137,11 +239,71 @@ h2 {color: chocolate;}
     letter-spacing: 1px;
     color: chocolate;
   }
-
-  body{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,31,41,1) 0%, rgba(2,6,6,1) 100%);}
-
-  h4{
-
-    color:white;
+  
+  body {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(31, 31, 41, 1) 0%, rgba(2, 6, 6, 1) 100%);
   }
+  
+  h4 {
+    color: white;
+  }
+  
+  .modal-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Imposta l'aspect ratio a 16:9 */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .modal-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  /* Rendi le card a 2 per riga su schermi medio-piccoli */
+  @media (max-width: 768px) {
+    .card-flyer {
+      width: calc(50% - 40px); /* Imposta la larghezza delle card in modo da avere 2 card per riga */
+    }
+  }
+  
+  /* Rendi le card a 1 per riga su schermi piccoli */
+  @media (max-width: 576px) {
+    .card-flyer {
+      width: calc(100% - 40px); /* Imposta la larghezza delle card in modo da avere 1 card per riga */
+    }
+  }
+  
+  
+  /* Modal Video */
+  .modal-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .modal-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Background */
+  body {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(31, 31, 41, 1) 0%, rgba(2, 6, 6, 1) 100%);
+  }
+  
+  h4 {
+    color: white;
+  }
+  
