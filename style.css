@@ -307,3 +307,21 @@ h2 {
     color: white;
   }
   
+  h1, h2, h4 {
+    text-align: center; /* Centra il testo */
+    margin-left: auto; /* Imposta il margine sinistro automatico */
+    margin-right: auto; /* Imposta il margine destro automatico */
+  }
+  .table {
+    border-radius: 10px; /* Aggiungi un bordo arrotondato alla tabella */
+    overflow: hidden; /* Assicura che il bordo arrotondato sia visibile */
+    border-spacing: 0; /* Imposta lo spazio tra le celle */
+    margin: 5px auto; /* Imposta i margini automatici per centrare la tabella */
+    padding: 0 20px; /* Aggiunge del padding sia a destra che a sinistra della tabella */
+    width: fit-content; /* Imposta la larghezza della tabella in modo che si adatti al contenuto */
+  }
+  
+  .table th,
+  .table td {
+    text-align: center; /* Centra il testo all'interno delle celle della tabella */
+  }
