@@ -1,18 +1,18 @@
 
 
 .navbar{
-background-color: black;
+background-color: white;
 color:white;
 }
-.navbar-brand{
-font-family:Arial, Helvetica, sans-serif;    
-    
-    }
 
-.navbar-brand:hover{
-        color:red;
+
+.nav-link:hover{
+        color:#e2ba1f;
         cursor: pointer;
         }
+
+
+
 
         /*main*/
         .main {
@@ -58,7 +58,7 @@ h2 {color: chocolate;}
     text-align: center;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,31,41,1) 0%, rgba(2,6,6,1) 100%);}
   #cards_landscape_wrap-2 .container{
-    padding-top: 80px; 
+    padding-top: 10px; 
     padding-bottom: 100px;
   }
   #cards_landscape_wrap-2 a{
@@ -71,8 +71,9 @@ h2 {color: chocolate;}
   #cards_landscape_wrap-2 .card-flyer .image-box{
     background: #ffffff;
     overflow: hidden;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
-    border-radius: 5px;
+     box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
+    ;
+    border-radius: 6px;
   }
   #cards_landscape_wrap-2 .card-flyer .image-box img{
     -webkit-transition:all .9s ease; 
@@ -92,6 +93,8 @@ h2 {color: chocolate;}
   }
   #cards_landscape_wrap-2 .card-flyer .text-box{
     text-align: center;
+    box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
+
   }
   #cards_landscape_wrap-2 .card-flyer .text-box .text-container{
     padding: 30px 18px;
@@ -108,7 +111,7 @@ h2 {color: chocolate;}
   }
   #cards_landscape_wrap-2 .card-flyer:hover{
     background: #fff;
-    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 15px 26px #e2ba1f;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
@@ -132,5 +135,10 @@ h2 {color: chocolate;}
     text-transform: uppercase;
     font-family: 'Roboto Black', sans-serif;
     letter-spacing: 1px;
-    color: #00acc1;
+    color: chocolate;
   }
+
+  body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,31,41,1) 0%, rgba(2,6,6,1) 100%);}
+
+  
