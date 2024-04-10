@@ -134,116 +134,7 @@ h2 {
 
   
   
-/* Cards */
-.main_container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-   
 
-  }
-  
-  #cards_landscape_wrap-2 {
-    text-align: center;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(31, 31, 41, 1) 0%, rgba(2, 6, 6, 1) 100%);
-  }
-  
-  #cards_landscape_wrap-2 .container {
-    padding-top: 10px;
-    padding-bottom: 100px;
-    margin-right: 6px;
-
-  }
-  
-  #cards_landscape_wrap-2 a {
-    text-decoration: none;
-    outline: none;
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer {
-    border-radius: 5px;
-    
-
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer .image-box {
-    background: #ffffff;
-    overflow: hidden;
-    box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
-    border-radius: 6px;
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer .image-box img {
-    -webkit-transition: all .9s ease;
-    -moz-transition: all .9s ease;
-    -o-transition: all .9s ease;
-    -ms-transition: all .9s ease;
-    width: 100%;
-    height: 200px;
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer:hover .image-box img {
-    opacity: 0.7;
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
-    transform: scale(1.15);
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer .text-box {
-    text-align: center;
-    box-shadow: 0px 1px 15px rgba(65, 65, 65, 0.93);
-
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer .text-box .text-container {
-    padding: 30px 18px;
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer {
-    background: #FFFFFF;
-    margin-top: 50px;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer:hover {
-    background: #fff;
-    box-shadow: 0px 15px 26px #e2ba1f;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    margin-top: 50px;
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer .text-box p {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: #000000;
-
-  }
-  
-  #cards_landscape_wrap-2 .card-flyer .text-box h6 {
-    margin-top: 0px;
-    margin-bottom: 4px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Roboto Black', sans-serif;
-    letter-spacing: 1px;
-    color: chocolate;
-  }
   
   body {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(31, 31, 41, 1) 0%, rgba(2, 6, 6, 1) 100%);
@@ -253,7 +144,22 @@ h2 {
     color: white;
   }
   
-
+  .modal-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Imposta l'aspect ratio a 16:9 */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .modal-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   
   
   /* Rendi le card a 2 per riga su schermi medio-piccoli */
@@ -271,7 +177,22 @@ h2 {
   }
   
   
-
+  /* Modal Video */
+  .modal-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .modal-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   
   /* Background */
   body {
@@ -282,3 +203,37 @@ h2 {
     color: white;
   }
   
+  h1, h2, h4 {
+    text-align: center; /* Centra il testo */
+    margin-left: auto; /* Imposta il margine sinistro automatico */
+    margin-right: auto; /* Imposta il margine destro automatico */
+  }
+  .table {
+    border-radius: 10px; /* Aggiungi un bordo arrotondato alla tabella */
+    overflow: hidden; /* Assicura che il bordo arrotondato sia visibile */
+    border-spacing: 0; /* Imposta lo spazio tra le celle */
+    margin: 15px auto; /* Imposta i margini automatici per centrare la tabella */
+    padding: 0 20px; /* Aggiunge del padding sia a destra che a sinistra della tabella */
+    width: fit-content; /* Imposta la larghezza della tabella in modo che si adatti al contenuto */
+  }
+  
+  .table th,
+  .table td {
+    text-align: center; /* Centra il testo all'interno delle celle della tabella */
+  }
+
+  /* Personalized color for titles */
+  h2, #h2, #myP, #myP2, #myP3, #titolo2, #timerDisplay{
+    color: chocolate; /* chocolate color */
+  }
+
+  h2 ,#tit3, label{
+    color: #e2ba1f; /* goldenrod color */
+
+  }
+
+ #caloriesBurned {
+  color: #e2ba1f; /* goldenrod color */
+font-size:xx-large;
+
+ }
