@@ -330,6 +330,10 @@
       <label for="repetitions" class="form-label">Repetitions</label>
       <input type="number" class="form-control" id="repetitions" title="Please enter a valid number.">
     </div>
+    <div class="mb-3">
+      <label for="weight" class="form-label">Weight</label>
+      <input type="number" class="form-control" id="weight" title="Please enter a valid number.">
+    </div>
     <button type="submit" onclick="submitForm(event)" class="btn btn-primary btn-block">Submit</button>
   </form>
   
@@ -345,6 +349,8 @@
             <th scope="col">Workout Name</th>
             <th scope="col">Duration (minutes)</th>
             <th scope="col">Repetitions</th>
+            <th scope="col">Weight</th>
+
           </tr>
         </thead>
         <tbody id="workoutResultsBody">
@@ -357,7 +363,7 @@
   <!-- Pulsante per analizzare l'allenamento -->
   <div class="row justify-content-center mt-3">
     <div class="col-md-6">
-      <button onclick="analyzeWorkout()" class="btn btn-success btn-block">Analyze My Workout</button>
+      <button onclick="analyzeWorkout1()" class="btn btn-success btn-block">Calculate % strongness</button>
     </div>
   </div>
 
@@ -382,17 +388,13 @@
 
       <!-- footer -->
 
-    <footer class="bg-body-tertiary fixed-bottom">
-
+      <footer class="bg-body-tertiary fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+   © 2020 Copyright   
+         </div>
+      </footer>
+  
     
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-      </div>
-    </footer>
-  
-  
-  
-  
-  </body>
-</html>
+    </body>
+  </html>
