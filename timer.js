@@ -143,6 +143,48 @@ function analyzeWorkout() {
   caloriesBurnedElement.textContent = "Calories Burned: " + totalCalories;
 }
 
+//DOWNLOAD
+function downloadTableAsCSV() {
+  var csvContent = [];
+  var headerRow = ["Workout Name", "Duration (minutes)", "Repetitions", "Weight", "Strenght"]; // title
+
+  // Add headers table
+  csvContent.push(headerRow.join(","));
+
+  // Add datos a csv
+  var rows = document.querySelectorAll("#workoutResultsBody tr");
+  rows.forEach(function(row) {
+      var rowData = [];
+      row.querySelectorAll("td").forEach(function(cell) {
+          rowData.push(cell.textContent);
+      });
+
+      // cel and row same number
+      while (rowData.length < headerRow.length) {
+          rowData.push(""); // Add empy cel
+      }
+
+      csvContent.push(rowData.join(","));
+  });
+
+  // Add "caloriesBurned" to CSV
+  var caloriesDivContent = document.getElementById("caloriesBurned").textContent;
+  csvContent.push(["", "", "", "", caloriesDivContent].join(","));
+
+  // add a link for download file CSV
+  var csvString = csvContent.join("\n");
+  var blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
+  var link = document.createElement("a");
+  link.setAttribute("href", URL.createObjectURL(blob));
+  link.setAttribute("download", "workout_results.csv");
+  document.body.appendChild(link); // Add link to doc
+  link.click(); // start download link
+}
+
+
+
+
+
 
 
 
@@ -156,7 +198,7 @@ function analyzeWorkout() {
   
     // round for table rows//
     rows.forEach(function(row) {
-      // Ottieni la durata e le ripetizioni dalla riga corrente
+      // duration and repetion of the current line
       var duration = parseFloat(row.cells[1].textContent);
       var repetitions = parseFloat(row.cells[2].textContent);
   
@@ -174,7 +216,7 @@ function analyzeWorkout() {
   
   // analyze workout//
   function analyzeWorkout1() {
-    // Calcola le calorie totali
+    // Calcolate the total kcal
     var totalCalories = calculateTotalCalories1();
   
     // num kcal burn  id "caloriesBurned"
@@ -194,34 +236,39 @@ function analyzeWorkout() {
   
    
 
-      // Verifica se il peso è vuoto o non valido
+      // Verify
       rows.forEach(function (row) {
-        // Ottieni la durata e le ripetizioni dalla riga corrente
+        // durations and repetitions by the current line
         var duration = parseFloat(row.cells[1].textContent);
         var repetitions = parseFloat(row.cells[2].textContent);
         var Weight = parseFloat(row.cells[3].textContent);
 
- // Controlla se il peso è zero
- if (weight === 0) {
-  weight = 1; // Se il peso è zero, impostalo a 1
+
+// VERIFY
+if (weight === 0 || isNaN(weight)) {
+  weight = 1; // WEIGHT IGUAL 1 IF 0 
 }
 
-        // total kcal
-        var calories = (duration / repetitions)*Weight ;
-        totalCalories += calories;
-      });
+// MANAGE ERRORS
+if (isNaN(duration) || isNaN(repetitions)) {
+  console.error("Missing duration or repetitions for a workout");
+  return; 
+}
 
-      // tot kcal//
-      return totalCalories;
-    }
+// CalcULATE KCAL FOR EXERCIZE
+var calories = (duration / repetitions) * weight;
+totalCalories += calories; // ADD KCAL
+});
 
+return totalCalories; // RETURN KCAL
+}
   
   
   
   
   // analyze workout//
   function analyzeWorkout3() {
-    // Calcola le calorie totali
+    // Calcolate total kcal
     var totalCalories = calculateTotalCalories3();
   
     // num kcal burn  id "caloriesBurned"
