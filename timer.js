@@ -1,3 +1,11 @@
+// Autoplay for iframe
+var videos = document.getElementsByTagName("iframe");
+for (var i = 0; i < videos.length; i++) {
+    videos[i].setAttribute("autoplay", "");
+}
+
+
+//TIMER
 let timerInterval;
 let timerRunning = false;
 let seconds = 0;
