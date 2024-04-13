@@ -300,8 +300,6 @@
       </div>
   </div>
 </div>
-
-<script src="timer.js"></script>
     
 <div class="container">
   <!-- FORM -->
@@ -342,27 +340,34 @@
           </tr>
         </thead>
         <tbody id="workoutResultsBody">
-          <!-- Placeholder per visualizzare i dati del modulo -->
+          <!-- Placeholder -->
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Pulsante per analizzare l'allenamento -->
+  <!-- analyze button -->
   <div class="row justify-content-center mt-3">
     <div class="col-md-6">
       <button onclick="analyzeWorkout()" class="btn btn-success btn-block">Calculate Kcal Burned</button>
     </div>
   </div>
 
-  <!-- Elemento per visualizzare il numero di calorie bruciate -->
+  <!-- numero kcal -->
   <div class="row justify-content-center mt-3">
     <div class="col-md-6">
       <div id="caloriesBurned" class="text-center"></div>
     </div>
   </div>
 
-  <!-- Spazio tra l'ultimo pulsante e il footer -->
+  <!-- download  CSV -->
+<div class="row justify-content-center mt-3">
+  <div class="col-md-6 text-center">
+      <button onclick="downloadTableAsCSV()" class="btn btn-warning">DOWNLOAD MY PROGRESS</button>
+  </div>
+</div>
+
+  <!-- Space -->
   <div class="mt-5"></div>
 </div>
 <br>
@@ -372,6 +377,7 @@
 <br>
 
 
+<script src="timer.js"></script>
 
 
       <!-- footer -->

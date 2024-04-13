@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitness app</title>
+    <meta name="author" content="Susanna Signoretti">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+  
+<!-- menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+          <img src="/pics/LOGO.JPG" alt="" width="150">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" onClick="document.location.href='pag1.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Excercises
+                  </a>
+              </li>
+          </ul>
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+      </div>
+  </div>
+</nav>
+
+</nav>
+
+  
+  <!-- main section -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions (FAQ) - Exercise Tips</h2>
+    <div class="question" onclick="toggleAnswer('squat')">How to avoid execution errors in Squats?</div>
+    <div class="answer" id="squat">
+        <p>To avoid execution errors in Squats:</p>
+        <ul>
+            <li>Ensure proper form by keeping your back straight, chest up, and knees in line with your toes.</li>
+            <li>Start with lighter weights to master the technique before increasing resistance.</li>
+            <li>Avoid rounding your back or letting your knees cave inwards during the movement.</li>
+        </ul>
+    </div>
+
+    <div class="question" onclick="toggleAnswer('abs')">How to perform Abdominals correctly?</div>
+    <div class="answer" id="abs">
+        <p>To perform Abdominals correctly:</p>
+        <ul>
+            <li>Engage your core muscles throughout the exercise.</li>
+            <li>Avoid pulling on your neck and focus on using your abdominal muscles to lift your upper body.</li>
+            <li>Exhale as you lift and inhale as you lower your torso.</li>
+        </ul>
+    </div>
+
+    <div class="question" onclick="toggleAnswer('jumping-jack')">How to avoid mistakes in Jumping Jacks?</div>
+    <div class="answer" id="jumping-jack">
+        <p>To avoid mistakes in Jumping Jacks:</p>
+        <ul>
+            <li>Land softly with slightly bent knees to reduce impact on joints.</li>
+            <li>Keep your arms and legs straight throughout the movement.</li>
+            <li>Focus on maintaining a steady pace and rhythm.</li>
+        </ul>
+    </div>
+
+    <div class="question" onclick="toggleAnswer('jump-rope')">How to prevent errors in Jump Rope?</div>
+    <div class="answer" id="jump-rope">
+        <p>To prevent errors in Jump Rope:</p>
+        <ul>
+            <li>Use a rope of appropriate length and adjust it if necessary.</li>
+            <li>Land softly on the balls of your feet to reduce strain on your ankles.</li>
+            <li>Start with slow, controlled jumps and gradually increase speed as you improve.</li>
+        </ul>
+    </div>
+
+    <div class="question" onclick="toggleAnswer('running')">How to avoid common mistakes in Running?</div>
+    <div class="answer" id="running">
+        <p>To avoid common mistakes in Running:</p>
+        <ul>
+            <li>Maintain proper posture with your head up, shoulders relaxed, and arms bent at a 90-degree angle.</li>
+            <li>Focus on breathing rhythmically and evenly.</li>
+            <li>Avoid overstriding and aim for a cadence of around 180 steps per minute.</li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+</div>
+    </div>
+    <script src="timer.js"></script>
+
+
+    <footer class="bg-body-tertiary fixed-bottom">
+
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+ © 2020 Copyright   
+       </div>
+    </footer>
+
+  
+  </body>
+</html>

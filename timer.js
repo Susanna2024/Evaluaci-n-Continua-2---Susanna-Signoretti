@@ -1,3 +1,28 @@
+
+// button add o remove
+
+function hide() { 
+  document.getElementById("myP").style.visibility = "hidden"; 
+} 
+function hide2() { 
+  document.getElementById("myP2").style.visibility = "hidden"; 
+}
+function hide3() { 
+  document.getElementById("myP3").style.visibility = "hidden"; 
+} 
+function show() { 
+ document.getElementById("myP").style.visibility = "visible"; 
+} 
+function show2() { 
+ document.getElementById("myP2").style.visibility = "visible"; 
+} 
+
+function show3() { 
+ document.getElementById("myP3").style.visibility = "visible"; 
+} 
+
+
+
 // Autoplay for iframe
 var videos = document.getElementsByTagName("iframe");
 for (var i = 0; i < videos.length; i++) {
@@ -143,10 +168,10 @@ function analyzeWorkout() {
   caloriesBurnedElement.textContent = "Calories Burned: " + totalCalories;
 }
 
-//DOWNLOAD
+//DOWNLOAD 
 function downloadTableAsCSV() {
   var csvContent = [];
-  var headerRow = ["Workout Name", "Duration (minutes)", "Repetitions", "Weight", "Strenght"]; // title
+  var headerRow = ["Workout Name", "Duration (minutes)", "Repetitions", "Weight", "Kcal"]; // title
 
   // Add headers table
   csvContent.push(headerRow.join(","));
@@ -224,6 +249,43 @@ function downloadTableAsCSV() {
     caloriesBurnedElement.textContent = "Incresed Strength %: " + totalCalories;
   }
   
+  //DOWNLOAD
+function downloadTableAsCSV() {
+  var csvContent = [];
+  var headerRow = ["Workout Name", "Duration (minutes)", "Repetitions", "Weight", "% Strongness"]; // title
+
+  // Add headers table
+  csvContent.push(headerRow.join(","));
+
+  // Add datos a csv
+  var rows = document.querySelectorAll("#workoutResultsBody tr");
+  rows.forEach(function(row) {
+      var rowData = [];
+      row.querySelectorAll("td").forEach(function(cell) {
+          rowData.push(cell.textContent);
+      });
+
+      // cel and row same number
+      while (rowData.length < headerRow.length) {
+          rowData.push(""); // Add empy cel
+      }
+
+      csvContent.push(rowData.join(","));
+  });
+
+  // Add "caloriesBurned" to CSV
+  var caloriesDivContent = document.getElementById("caloriesBurned").textContent;
+  csvContent.push(["", "", "", "", caloriesDivContent].join(","));
+
+  // add a link for download file CSV
+  var csvString = csvContent.join("\n");
+  var blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
+  var link = document.createElement("a");
+  link.setAttribute("href", URL.createObjectURL(blob));
+  link.setAttribute("download", "workout_results.csv");
+  document.body.appendChild(link); // Add link to doc
+  link.click(); // start download link
+}
   
   
   //CALORIES + tonify//
@@ -255,7 +317,7 @@ if (isNaN(duration) || isNaN(repetitions)) {
   return; 
 }
 
-// CalcULATE KCAL FOR EXERCIZE
+// Calc KCAL FOR EXERCIZE
 var calories = (duration / repetitions) * weight;
 totalCalories += calories; // ADD KCAL
 });
@@ -273,8 +335,53 @@ return totalCalories; // RETURN KCAL
   
     // num kcal burn  id "caloriesBurned"
     var caloriesBurnedElement = document.getElementById("caloriesBurned");
-    caloriesBurnedElement.textContent = "Strenght incresed %: " + totalCalories;
+    caloriesBurnedElement.textContent = "Incresed Lean mass %: " + totalCalories;
   }
   
   
-  
+  //DOWNLOAD
+function downloadTableAsCSV() {
+  var csvContent = [];
+  var headerRow = ["Workout Name", "Duration (minutes)", "Repetitions", "Weight", "Lean mass"]; // title
+
+  // Add headers table
+  csvContent.push(headerRow.join(","));
+
+  // Add datos a csv
+  var rows = document.querySelectorAll("#workoutResultsBody tr");
+  rows.forEach(function(row) {
+      var rowData = [];
+      row.querySelectorAll("td").forEach(function(cell) {
+          rowData.push(cell.textContent);
+      });
+
+      // cel and row same number
+      while (rowData.length < headerRow.length) {
+          rowData.push(""); // Add empy cel
+      }
+
+      csvContent.push(rowData.join(","));
+  });
+
+  // Add "caloriesBurned" to CSV
+  var caloriesDivContent = document.getElementById("caloriesBurned").textContent;
+  csvContent.push(["", "", "", "", caloriesDivContent].join(","));
+
+  // add a link for download file CSV
+  var csvString = csvContent.join("\n");
+  var blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
+  var link = document.createElement("a");
+  link.setAttribute("href", URL.createObjectURL(blob));
+  link.setAttribute("download", "workout_results.csv");
+  document.body.appendChild(link); // Add link to doc
+  link.click(); // start download link
+}
+//faq section"
+function toggleAnswer(id) {
+  const answer = document.getElementById(id);
+  if (answer.style.display === "none") {
+      answer.style.display = "block";
+  } else {
+      answer.style.display = "none";
+  }
+}

@@ -28,12 +28,16 @@
     margin-left: 300px;
 }
 
-h1 {
+h1, p{
     color: #e2ba1f;
 }
 
-h2 {
+h2, li, div{
     color: chocolate;
+}
+
+div{
+  color: white;
 }
 
 .main h1 {
@@ -244,3 +248,36 @@ h2 {
     color: white;
   }
   
+/* CSS para el menú de preguntas frecuentes (FAQ) */
+.faq-section {
+  margin-top: 20px;
+}
+
+.question {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #e2ba1f;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative; /* Agregado para posicionar el icono */
+  font-weight: bold; /* Texto en negrita para mejorar la legibilidad */
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold; /* Texto en negrita para mejorar la legibilidad */
+
+}
+
+.toggle-icon {
+  position: absolute; /* Posicionamiento absoluto para el icono */
+  top: 50%; /* Centrado verticalmente */
+  right: 10px; /* Espacio entre el icono y el borde derecho */
+  transform: translateY(-50%); /* Centrado verticalmente */
+  font-weight: bold; /* Texto en negrita para mejorar la legibilidad */
+
+}
