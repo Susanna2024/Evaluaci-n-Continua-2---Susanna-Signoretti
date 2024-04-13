@@ -1,43 +1,5 @@
 
 
-/* ----------- iPhone  ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
-
-
-
 
 
 
@@ -256,17 +218,17 @@ h2 {
 
   
   
-  /* Rendi le card a 2 per riga su schermi medio-piccoli */
+  /* RESPONSIVE CARDS m-L*/
   @media (max-width: 768px) {
     .card-flyer {
-      width: calc(50% - 40px); /* Imposta la larghezza delle card in modo da avere 2 card per riga */
+      width: calc(50% - 40px); /*  2 cards for row */
     }
   }
   
-  /* Rendi le card a 1 per riga su schermi piccoli */
+  /* responsive cards small*/
   @media (max-width: 576px) {
     .card-flyer {
-      width: calc(100% - 40px); /* Imposta la larghezza delle card in modo da avere 1 card per riga */
+      width: calc(100% - 40px); /*  1 card for raw */
     }
   }
   

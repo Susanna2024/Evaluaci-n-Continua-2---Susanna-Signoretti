@@ -1,45 +1,5 @@
 
 
-/* ----------- iPhone  ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
-
-
-
-
-
 
 /* Navbar */
 .navbar {
@@ -79,7 +39,7 @@ h2 {
     font-weight: 600;
 }
 
-//* Navbar */
+/* Navbar */
 .navbar {
     background-color: white;
     color: black;
@@ -147,7 +107,7 @@ h2 {
   .modal-video-container {
     position: relative;
     padding-bottom: 56.25%;
-    /* Imposta l'aspect ratio a 16:9 */
+    /* aspect ratio a 16:9 */
     padding-top: 30px;
     height: 0;
     overflow: hidden;
@@ -162,20 +122,7 @@ h2 {
   }
   
   
-  /* Rendi le card a 2 per riga su schermi medio-piccoli */
-  @media (max-width: 768px) {
-    .card-flyer {
-      width: calc(50% - 40px); /* Imposta la larghezza delle card in modo da avere 2 card per riga */
-    }
-  }
-  
-  /* Rendi le card a 1 per riga su schermi piccoli */
-  @media (max-width: 576px) {
-    .card-flyer {
-      width: calc(100% - 40px); /* Imposta la larghezza delle card in modo da avere 1 card per riga */
-    }
-  }
-  
+ 
   
   /* Modal Video */
   .modal-video-container {
@@ -203,24 +150,34 @@ h2 {
     color: white;
   }
   
-  h1, h2, h4 {
-    text-align: center; /* Centra il testo */
-    margin-left: auto; /* Imposta il margine sinistro automatico */
-    margin-right: auto; /* Imposta il margine destro automatico */
-  }
-  .table {
-    border-radius: 10px; /* Aggiungi un bordo arrotondato alla tabella */
-    overflow: hidden; /* Assicura che il bordo arrotondato sia visibile */
-    border-spacing: 0; /* Imposta lo spazio tra le celle */
-    margin: 15px auto; /* Imposta i margini automatici per centrare la tabella */
-    padding: 0 20px; /* Aggiunge del padding sia a destra che a sinistra della tabella */
-    width: fit-content; /* Imposta la larghezza della tabella in modo che si adatti al contenuto */
-  }
-  
-  .table th,
-  .table td {
-    text-align: center; /* Centra il testo all'interno delle celle della tabella */
-  }
+/* Center the text */
+h1, h2, h4 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add rounded border to the table */
+.table {
+  border-radius: 10px;
+  /* Ensure rounded border is visible */
+  overflow: hidden;
+  /* Set space between cells */
+  border-spacing: 0;
+  /* Set automatic margins to center the table */
+  margin: 15px auto;
+  /* Add padding on both sides of the table */
+  padding: 0 20px;
+  /* Set the table width to fit its content */
+  width: fit-content;
+}
+
+/* Center text inside table cells */
+.table th,
+.table td {
+  text-align: center;
+}
+
 
   /* Personalized color for titles */
   h2, #h2, #myP, #myP2, #myP3, #titolo2, #timerDisplay{

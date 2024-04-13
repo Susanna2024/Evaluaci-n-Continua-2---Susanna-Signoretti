@@ -350,12 +350,16 @@
             <th scope="col">Duration (minutes)</th>
             <th scope="col">Repetitions</th>
             <th scope="col">Weight</th>
-
+            
           </tr>
         </thead>
         <tbody id="workoutResultsBody">
-          <!-- Placeholder -->
-        </tbody>
+  <!-- stamp number of calories -->
+  <div class="row justify-content-center mt-3">
+    <div class="col-md-6">
+      <div id="caloriesBurned" class="text-center"></div>
+    </div>
+  </div>        </tbody>
       </table>
     </div>
   </div>
@@ -367,14 +371,15 @@
     </div>
   </div>
 
-  <!-- stamp number of calories -->
-  <div class="row justify-content-center mt-3">
-    <div class="col-md-6">
-      <div id="caloriesBurned" class="text-center"></div>
-    </div>
-  </div>
 
-  <!-- space-->
+<!-- Pulsante per scaricare la tabella come CSV -->
+<div class="row justify-content-center mt-3">
+  <div class="col-md-6 text-center">
+      <button onclick="downloadTableAsCSV()" class="btn btn-warning">DOWNLOAD MY PROGRESS</button>
+  </div>
+</div>
+
+<!-- space-->
   <div class="mt-5"></div>
 </div>
 <br>
